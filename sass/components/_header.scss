@@ -2,8 +2,17 @@ header{
     border: 1px solid var(--header-border);
 }
 
-.logo-part{
-    color: var(--logo-color)
+.logo{
+    color: var(--accent-color);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+
+    &__part{
+        color: var(--logo-color)
+    }
 }
 
 .main-nav{
@@ -11,16 +20,18 @@ header{
     align-items: center;
 }
 
-.site-nav{
+.navigation{
     display: flex;
     margin-left: 93px;
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+    }
 }
 
-.site-nav .item:not(:last-child){
-    margin-right: 50px;
-}
-
-.site-nav a {
+.navigation a{
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -30,17 +41,17 @@ header{
     letter-spacing: 0.02em;
     position: relative;
     transition: color 250ms var(--time-function);
+
+    &:hover, &:focus{
+        color: var(--accent-color);
+    }
 }
 
-.site-nav a:hover,.site-nav a:focus{
-    color: var(--accent-color);
-}
-
-.site-nav .link.current{
+.navigation .link.current{
     color: var(--accent-color)
 }
 
-.site-nav .item .link.current::after{
+.navigation__item .link.current::after{
     position: absolute;
     left:0;
     bottom:-1px;
@@ -51,26 +62,26 @@ header{
     border-radius: 2px;
 }
 
-.contacts-list{
+.contacts{
     display: flex;
     margin-left: auto;
+
+    &__item + &__item{
+        margin-left: 50px;
+    }
 }
 
-.contacts-list .item + .item{
-    margin-left: 50px;
-}
-
-.icon-contacts{
+.contacts__icon{
     fill: currentColor;
     margin-right: 10px;
     transition: fill 250ms var(--time-function);
+
+    &:hover,&:focus{
+        fill: var(--accent-color);
+    }
 }
 
-.icon-contacts:hover,.icon-contacts:focus{
-    fill: var(--accent-color);
-}
-
-.contacts{
+.contacts__link{
     color: var(--seconday-text-color);
     font-weight: 500;
     line-height: 1.14;
@@ -80,8 +91,8 @@ header{
     display: flex;
     align-items: center;
     transition: color 250ms var(--time-function);
-}
 
-.contacts:hover,.contacts:focus{
-    color: var(--accent-color);
+    &:hover,&:focus{
+        color: var(--accent-color);
+    }
 }

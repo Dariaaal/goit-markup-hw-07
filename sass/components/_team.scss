@@ -1,28 +1,50 @@
-.team{
+.workers{
     background-color: var(--section-bg-color);
     padding-top: 94px;
 }
 
-.team-list{
+.team{
     display: flex;
+
+    &__item{
+        background-color: var(--letters-color);
+    }
+
+    &__item:not(:first-child){
+        margin-left: 30px;
+    }
+
+    &__names{
+        color: var(--primary-text-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        margin-bottom: 10px;
+    }
+
+    &__description{
+        color: var(--seconday-text-color);
+        font-size: 16px;
+        line-height: 1.18;
+    }
+
+    &__border{
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
 }
 
-.team-list .item{
-    background-color: var(--letters-color);
-}
-
-.team-list .item:not(:first-child){
-    margin-left: 30px;
-}
-
-.socialmedia-list{
+.socialmedia{
     display: flex;
     margin-top: 16px;
     justify-content: center;
     gap: 10px;
 }
 
-.team-links{
+.socialmedia__links{
     height: 44px;
     width: 44px;
     background-color: var(--letters-color);
@@ -32,31 +54,9 @@
     justify-content: center;
     fill: var(--clients-color);
     transition: background-color 250ms var(--time-function), fill 250ms var(--time-function);
-}
-
-.team-links:hover,.team-links:focus{
-    background-color: var(--accent-color);
-    fill: var(--letters-color);
-}
-
-.names{
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.18;
-    margin-bottom: 10px;
-}
-
-.description{
-    color: var(--seconday-text-color);
-    font-size: 16px;
-    line-height: 1.18;
-}
-
-.team-border{
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
+    
+    &:hover,&:focus{
+        background-color: var(--accent-color);
+        fill: var(--letters-color);
+    }
 }

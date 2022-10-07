@@ -1,13 +1,13 @@
-.clients{
+.companies{
     padding-top: 94px;
 }
 
-.clients-list-icon{
+.clients{
     display: flex;
     gap: 30px;
 }
 
-.clients-links{
+.clients__links{
     width: 170px;
     height: 92px;
     border-radius: 4px;
@@ -18,9 +18,11 @@
     align-items: center;
     fill: var(--clients-color);
     transition: fill 250ms var(--time-function), border-color 250ms var(--time-function);
+
+    &:hover,&:focus{
+        fill: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+    
 }
 
-.clients-links:hover,.clients-links:focus{
-    fill: var(--accent-color);
-    border-color: var(--accent-color);
-}
