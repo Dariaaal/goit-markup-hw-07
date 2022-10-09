@@ -576,7 +576,8 @@ address {
   font-style: normal;
   margin-top: 20px;
 }
-address__item:not(:first-child) {
+
+.address__item:not(:first-child) {
   margin-top: 9px;
 }
 

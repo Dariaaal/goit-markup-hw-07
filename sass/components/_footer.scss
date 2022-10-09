@@ -30,11 +30,13 @@
 address{
     font-style: normal;
     margin-top: 20px;
+}
 
+.address{
     &__item{
         &:not(:first-child){
             margin-top: 9px;
-    }
+        }
     }
 }
  
